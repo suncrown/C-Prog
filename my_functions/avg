@@ -1,0 +1,10 @@
+#include<stdio.h>
+
+float avg(int list[size]){    
+    int sum,i;
+    sum=0;
+    for(i=0;i<size;i++){
+        sum += list[i];
+    }
+    return (float)sum/(float)size;
+}

@@ -1,0 +1,19 @@
+Question 1: What the library stdio.h?
+Ans: It is an header file that contains information about the input and output functions. E.g getc and putc: reads and write character to file,
+ scanf: reads character, string and integer from keyboard.
+ printf: prints character, string and integer etc to the screen.
+
+Question 2: What does puts() function do?
+Ans: It writes a string to stdout up to but not incuding the null character and a new line is appended to the output.
+Delcaration: int puts(const char *str)
+Example:
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+	char name[13];
+	strcpy(name,"Sola Adewumi");
+	puts(name);
+
+	return 0;
+}	

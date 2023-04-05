@@ -1,0 +1,14 @@
+#include <math.h>
+#include<stdio.h>
+
+int main(){
+        int base;
+		int power;
+
+        printf("Please enter the base :");
+		scanf(%d,&base);
+        printf("Please enter the power :");
+		scanf(%d, &power);
+        printf("%d raised to the power of %d is:", base, power, pow(base,power));
+        return 0;
+}

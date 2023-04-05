@@ -1,0 +1,18 @@
+
+#include <math.h> //// add -lm when compiling: It is an option to link againt the math library.
+#include<stdio.h>
+
+int main(){
+        int base;
+        base = 2; // add -lm when compiling: It is an option to link againt the math library.
+        int result1 = (int)pow(base,2); // Why cannot I include a declared variable base here? Ans: It could be used if it is compiled with -ml option
+        int result2 = (int)pow(2,3);
+        int result3 = (int)pow(2,5);
+        printf("2 raised to the power of 2 is:%d\n",result1);
+        printf("2 raised to the power of 3 is:%d\n",result2);
+        printf("2 raised to the power of 5 is:%d\n",result3);
+        return 0;
+
+
+Question 2
+Why is the gets() function dangerous? What is the best alternative.

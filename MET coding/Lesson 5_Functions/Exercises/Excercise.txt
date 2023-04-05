@@ -1,0 +1,14 @@
+Programming Exercises
+1. Write a short program that uses a function to print out your name in a box when called.
+2. Write a program that prints out the smaller of two numbers entered form the keyboard. Use a
+function to do the actual comparison of the two numbers.
+3. Write a program that contains two functions which return the volume of a cone and the volume
+of a hemisphere.
+4. Write a program that reads in a persons exam score and produces a horizontal bar chart of the
+results (6 students). Use a function to draw the graphics on the screen. This function should be of
+type void and have the students mark as its argument. (HINT for(i=1;i<=score;i++) printf("#");)
+5. Write a mathematical function which determines the exponential of a number using exp(x) = 1 +
+x / 1! + x^2 / 2! + x^3 / 3! + x^4 / 4! + ...
+Compare your result for different x with the standard exp() function.
+6. Write a program with separate functions which determines the slope of a straight line and the
+point at which the line crosses the Y-axis. Complete the following table

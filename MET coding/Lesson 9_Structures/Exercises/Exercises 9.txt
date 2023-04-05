@@ -1,0 +1,13 @@
+PROGRAMMING EXERCISES 1
+1. Write struct declarations for each of the following problems
+o playing cards
+o time (hours,min,sec)
+o employees in a company
+o students in college
+2. Write a program that can add, multiply and divide complex numbers. Each operation should be written as a function and a structure should be used for the complex number. ( z = a + ib)
+3. Write a short program which uses the structure TIME created in Q1.
+4. Write a program using a structure DATE_OF_BIRTH to read in and print out a birthday.to an array of size 20.
+5. Modify the program in Q4 so that 10 birthdays can be stored in an array and then printed to the screen.
+6. Given that the equation of a line can be determined from its slope m and one point (x1,y2) , write a structure declaration for a line and write a function that allows the user enter a point and slope (or two points) and prints out the equation of the line.
+7. Write out you own summary notes on structures in C.
+8. Design first and then write a program that holds the records of ten students. The following fields are required; student number (3ditgit), student name, age and exam marks for five exams. You should store the records in an array and then write a function that searches the array for a given student no. or name. If a match is found then the student details are printed out together with the average mark. Write another function which allows the user to search for the best average mark. When found, the students details are printed out.

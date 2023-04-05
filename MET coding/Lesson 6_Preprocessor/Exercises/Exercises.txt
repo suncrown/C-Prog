@@ -1,0 +1,11 @@
+Programming Exercises
+1. Write a program that will count from 20 to -15 by counting backwards. Use #define statements
+to define the upper and lower limits.
+2. Explain briefly in your own words how the C Preprocessor works.
+3. Using the #define directive, write a short piece of code to calculate the circumference of a circle.
+4. You are asked to write a program that uses the #define directive which accepts two arguments
+used to find the area of a rectangle.
+5. Explain how the #include works. Think of an example where it may be used in conjunction with
+your own source code.
+6. Write a program which uses the #define and #undef directives as a switch to print out either
+your first name only or your full name.

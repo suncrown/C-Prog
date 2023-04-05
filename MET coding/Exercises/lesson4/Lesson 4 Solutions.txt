@@ -1,0 +1,309 @@
+EXERCISES
+
+Exercise 1.
+#include <math.h>
+#include<stdio.h>
+
+//Using the if-else construct write a program that reads in an exam mark (0-100) and prints out
+//what grade the mark falls into. Use the following: A(80-100), B(60-79),C(40-59) and D(<40).
+
+int main(){
+        int score;
+	char A,B,C,D;
+        printf("Please enter your score :");
+	scanf("%d:",&score);
+	if (0 < score && score < 40)
+            printf("Your grade is %c:\n",'D');	
+        else if (39 < score && score < 60)
+            printf("Your grade is %c:\n",'C');
+	else if (59 < score && score < 80)
+            printf("Your grade is %c:\n",'B');	
+	else if (79 < score && score < 101)
+            printf("Your grade is %c:\n",'A');	
+	else
+           printf("Please enter correct score!\n");
+        return 0;
+}
+
+
+Exercise 2.
+#include<stdio.h>
+#include<math.h>
+
+//Develop a program of your choice that uses the logical operators ||, ! and &&.
+// A Quizz game
+
+int main(){
+int question, num, square;
+int level1=0;
+char Y, N, c;
+
+printf("Please select a question number below\n");
+printf("Enter '1' to select Question 1\n");
+printf("Enter '2' to select Question 2\n");
+scanf("%d", &question);
+
+if  (question == 1 || question == 2){
+	printf("You have selected question: %d\n",question);
+	if (question == 1){	
+		printf("Enter a number between 0  and 4\n");
+		scanf("%d", &num);
+		if (num == 1 || num == 2 || num == 3){
+			level1 = 1;
+			printf("You have entered %d, You are Correct\n",num);
+			printf("Do you want to proceed to Level 2? Y/N :");
+		
+			getchar();
+   			c = getchar();
+		
+       			printf("Character entered is :%c \n",c);
+
+			if (c == 'Y'){
+				printf("What is the square of %d?\n",num);
+				scanf("%d", &square);
+		
+
+				if  (square ==num*num && level1==1){
+					printf("You have entered %d, You are Correct\n",num*num);
+					printf("Congratualations! You have completed this quiz\n");
+				}
+				else
+					printf("Sorry, that is a wrong answer. The correct answer is: %d\n",num*num);
+			}
+		}
+		else
+			printf("Enter number only between 0 and 4, you have entered %d\n",num);
+	}
+	
+	
+	//////////////////// Second condition, I just copied and pasted the above /////////////////	
+	if (question ==2){
+		printf("Enter a number between 5  and 10\n");
+                scanf("%d", &num);
+                if (num == 6 || num == 7 || num == 8 || num ==9){
+                        level1 = 2;
+                        printf("You have entered %d, You are Correct\n",num);
+                        printf("Do you want to proceed to Level 2? Y/N :");
+
+                        getchar();
+                        c = getchar();
+
+                        printf("Character entered is :%c \n",c);
+
+                        if (c == 'Y'){
+                                printf("What is the square of %d?\n",num);
+                                scanf("%d", &square);
+
+
+                                if  (square ==num*num && level1==1){
+                                        printf("You have entered %d, You are Correct\n",num*num);
+                                        printf("Congratualations! You have completed this quiz\n");
+                                }
+                                else
+                                        printf("Sorry, that is a wrong answer. The correct answer is: %d\n",num*num);
+                        }
+                }
+                else
+                        printf("Enter number only between 5 and 10, you have entered %d\n",num);
+
+	}
+}
+else
+	printf("That is an invalid entry! Please enter 1 or 2 ONLY\n");
+
+
+return 0;
+}
+
+
+
+Exercise 3.
+#include <stdio.h>
+// What will the following code assign to the variable abs?
+// It will assign positive to a negative number entered.
+//Implementing the conditional operator (abs = (num <0)? -num :num; )using if else
+
+int main(){
+	int abs,num;
+	printf("Enter any negative number:\n");  
+	scanf("%d",&num); 
+	abs = (num <0)? -num :num;
+	printf("This program has now converted your negative number: %d to absolute: %d\n",num,abs);
+   return 0;
+}
+
+////////   Implementing the above conditional operator using if else ///////////
+#include <stdio.h>
+int main(){
+	int abs,num;
+	printf("Enter any negative number:\n");  
+	scanf("%d",&num); 
+	abs = (num <0)? -num :num;
+	printf("This program has now converted your negative number: %d to absolute: %d\n",num,abs);
+   return 0;
+}
+
+
+
+
+Exercise 4.
+#include<stdio.h>
+/* Write a program that will ask a car driver how fast they were driving on the motorway and then
+printout the response a Garda might give using the following speed ranges: >85, >70, >55, < 40. */
+
+int main(){
+        int speed,speed1 = 85, speed2 = 70, speed3 = 55, speed4 = 40;
+
+        printf("Enter how fast you were driving on the motorway? :");
+	scanf("%d:",&speed);
+	if (speed > speed1)
+            printf("Gardai: Your driving speed is greater than %d:\n",speed1);	
+        else if (speed > speed2 && speed2 < speed1)
+            printf("Gardai: Your driving speed is greater than %d:\n",speed2);
+	else if (speed > speed3 && speed3 < speed2 )
+            printf("Gardai: Your driving speed is greater than %d:\n",speed3);
+	else if (speed > speed4 && speed4 < speed3 )
+            printf("Gardai: Your driving speed is greater than %d:\n",speed4);
+
+	else if (0 < speed && speed < speed4)
+            printf("Gardai: Your driving speed is less than %d:\n",speed4);
+	else
+           printf("Please enter only positive speed!\n");
+        return 0;
+}
+
+
+
+
+Exercise 5.
+
+
+#include <stdio.h>
+#include <math.h>
+/*The solution of a quadratic equation (inputs are a,b and c )
+a x^2 + b x + c = 0
+can be found from the following formulae:
+
+x1=(-b+sqrt(b*b - 4*a*c) ) / (2*a) 
+x2=(-bsqrt(b*b - 4*a*c) ) / (2*a)
+
+You are asked to write a general program to solve such an equation. The program should be able
+to handle the three distinct cases,
+(i) b*b = 4*a*c
+(ii) b*b > 4*a*c
+(iii)b*b < 4*a*c 
+Adapted from openAI*/
+
+
+int main() {
+    double a, b, c, discriminant, root1, root2;
+
+    printf("Enter coefficients a, b, and c: ");
+    scanf("%lf %lf %lf", &a, &b, &c);
+
+    // The discriminant tells us whether there are two solutions, one solution, or no solutions.
+    discriminant = b*b - 4*a*c;
+
+    if (discriminant > 0) {
+        root1 = (-b + sqrt(discriminant)) / (2*a);
+        root2 = (-b - sqrt(discriminant)) / (2*a);
+        printf("Roots are: %lf and %lf", root1, root2);
+    }
+    else if (discriminant == 0) {
+        root1 = root2 = -b / (2*a);
+        printf("Roots are: %lf and %lf", root1, root2);
+    }
+    else {
+        printf("real roots do not exit");
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+Exercise 6.
+#include<stdio.h>
+/* Using a switch structure,write a program to act as a calculator which reads in one of four
+operations(+,-,*,/) along with two numbers that it operates on.. */
+
+int main(){
+	int operator, operand1, operand2;
+	
+	printf("'+' means 1, '-' means 2, '*' means 3 and '/' means 4 \n");
+	printf("Please enter an option from 1 to 4.");
+	scanf("%d:",&operator);
+	
+	printf("Please the first operand:\n");
+	scanf("%d:",&operand1);
+
+	printf("Please the second operand:\n");
+	scanf("%d:",&operand2);
+
+	switch (operator){
+		case 1: printf("The sum of %d and %d is %d\n", operand1,operand2, operand1+operand2); break;
+		case 2: printf("Substracting %d from %d is %d\n", operand1,operand2, operand1-operand2); break;
+		case 3: printf("Multiplying %d and %d is %d\n", operand1,operand2, operand1*operand2); break;
+		case 4: printf("Dividing %d and %d is %d\n", operand1,operand2, operand1/operand2); break;
+		default:printf("Please enter valid numbers \n"); break;
+	}
+	return(0);
+}
+
+
+
+
+
+
+Exercise 7.
+
+#include <stdio.h>
+/*Write a program that counts the number of white spaces or blanks in a sentence which is
+terminated by a period (full stop). Adapted from openAI*/
+
+int main() {
+    int Number_of_blank = 0;
+    char c;
+
+    printf("Enter a sentence terminated by a period: ");
+
+    while ((c = getchar()) != '.') {
+        if (c == ' ') {
+            Number_of_blank ++;
+        }
+    }
+
+    printf("The number of white spaces or blanks is: %d\n", Number_of_blank );
+
+    return 0;
+}
+
+
+
+Exercise 8.
+
+#include <stdio.h>
+#include <ctype.h>
+
+/* Write a program using a do while loop which finds the length of a word. Use the C library
+function isspace() in ctype.h to check for white spaces. Adapted from openAI*/
+
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char word[100];
+    int length_of_word = 0, i = 0;
+    printf("Enter a word: ");
+    do {
+        word[i] = getchar();
+        if (!isspace(word[i])) {
+            length_of_word ++;
+        }
+    } while (word[i++] != '\n');
+    printf("Length of the word: %d\n", length_of_word );
+    return 0;
+}
