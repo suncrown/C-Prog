@@ -1,6 +1,15 @@
 {
     "files.associations": {
         "sort": "c",
-        "avg": "c"
+        "avg": "c",
+        "fill": "c",
+        "min": "c",
+        "max": "c",
+        "quadratic_fx": "c",
+        "quadratic": "c",
+        "quadratic_0_1_interval": "c",
+        "mean": "c",
+        "std": "c",
+        "vector_add": "c"
     }
 }

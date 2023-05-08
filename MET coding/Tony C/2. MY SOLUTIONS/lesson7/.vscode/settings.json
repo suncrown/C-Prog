@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "quadratic": "c",
+        "vector_alg": "c",
+        "fill": "c"
+    }
+}

@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+/**
+v= {3,4,1}; u={6,7,2}
+v + u = (3+6,4+7,1+2) = (9,11,3)
+v * u = 3*6 + 4*7 + 1*2 = ?
+Write two functions, one that adds two vectors and one that multiplies two vectors..**/
+
+void vector_alg_fx(float a[SIZE],float b[SIZE]){
+    int i;
+    float c[SIZE];
+    float d[SIZE];
+    fill_fx(a);
+    fill_fx(b);
+    for(i=0; i<SIZE; i++){
+        c[i] = a[i] + b[i];
+        d[i] = a[i] * b[i];
+    }
+
+    printf("The sum of the vectors entered are: ");
+    for(i=0; i<SIZE; i++){
+        printf("%f ",c[i]);
+    }
+
+    printf("\nThe multiplication of the vectors entered are: ");
+    for(i=0; i<SIZE; i++){
+        printf("%f ",d[i]);
+    }
+    printf("\n");
+}

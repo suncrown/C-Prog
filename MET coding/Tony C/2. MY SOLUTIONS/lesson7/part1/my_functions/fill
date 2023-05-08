@@ -1,0 +1,13 @@
+#include<stdio.h>
+
+// This function prompt user to input float or intger
+void fill_fx(float hold[SIZE]){
+    int i;
+    
+    for(i=0; i<SIZE; i++){
+        printf("Please enter a number:");
+        scanf("%f",&hold[i]);
+    }
+    printf("\n");
+}
+

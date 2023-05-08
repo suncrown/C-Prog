@@ -1,0 +1,21 @@
+Programming Exercises 2
+1. Write a program that reads in and prints out your name and address into an array using the scanf
+and printf functions.
+2. Repeat 1 using gets and puts.
+3. Write a short program that counts the number of letters in a persons name which they have type
+in at the keyboard.
+4. Write a program which reads in a line of text from the keyboard and also a character from the
+keyboard, and then prints out the number of times that the character appeared in the line of
+text.
+5. Write a function that will capitalise all the characters in a string.
+6. A matrix can be defined as a 2-dim array. Conside the matrices below
+These are examples of 2x2 matrices. We can add/subtract and multiply matrices as defined
+earlier. Write a program which allows the program user to enter the elements of two matrices
+and also the operation +,- or * which they want to be performed on the matrices. Print the
+results out in matrix form.
+7. Write a program which prints out a table of values to be plotted by a graphics package of the
+following function
+y = -3 x + 11 for -10 < x < 10
+,
+8. Write a program in which the user enters 5 cities. The program should store them first and then
+display them to the user.

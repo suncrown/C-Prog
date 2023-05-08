@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<string.h>
+#include<math.h>
+#include<stdlib.h>
+
+// A function that will return the std of an array
+float std_fx(float list[]){ //This is a int function because it will return a number which is an int.
+
+    int i;
+    float std =0;
+    float mean = mean_fx(list);
+    for(i=0; i<SIZE; i++){
+        std += pow((list[i]-mean),2);
+    }
+    float sdv= pow(std/(float)SIZE,0.5);
+    return sdv;
+}

@@ -1,0 +1,68 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+/**
+v= {3,4,1}    u= {6,7,2}
+   {1,2,3};      {4,5,6};
+
+v + u = (3+6,4+7,1+2) = (9,11,3)
+        (1+4,2+5,3+6)   (5,7,8)
+
+Write two functions, one that adds, substracts and multiplies two 2D-vectors..**/
+
+void vector_alg_fx(float a[ROW][COL],float b[ROW][COL],char sel){
+    int i,j,counter;
+    float c[ROW][COL]; //c : adds a and b
+    float d[ROW][COL]; //d : substracts a and b
+    float e[ROW][COL]; //e : multiplies a and b
+
+    char selection[] = {'+','-','*'};
+    counter = strlen(selection);
+
+    fill2_fx(a);
+    fill2_fx(b);
+
+    for(i=0; i<ROW; i++){
+        for(j=0; j<COL; j++){
+            c[i][j] = a[i][j] + b[i][j];
+            d[i][j] = a[i][j] - b[i][j];
+            e[i][j] = a[i][j] * b[i][j];
+        }
+    }
+
+   
+
+    if (sel == selection[0]){
+        printf("The sum of the vectors entered are: \n");
+        for(i=0; i<ROW; i++){
+            printf("\n");
+            for(j=0; j<COL; j++){
+                printf("%f ",c[i][j]);
+                //printf("\n");
+            }
+        }
+    }
+
+    if (sel == selection[1]){
+        printf("The substraction of the vectors entered are: \n");
+        for(i=0; i<ROW; i++){
+            for(j=0; j<COL; j++){
+                printf("%f ",d[i][j]);
+                //printf("\n");
+            }
+        }
+    }
+
+    if (sel == selection[2]){
+        printf("The multiplication of the vectors entered are: \n");
+        for(i=0; i<ROW; i++){
+            for(j=0; j<COL; j++){
+                printf("%f ",e[i][j]);
+                //printf("\n");
+            }
+        }
+    }
+
+    printf("\n");
+}

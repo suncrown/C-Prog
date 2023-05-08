@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+// This function prompt user to input float or intger
+void fill2_fx(float hold[ROW][COL]){
+    int i,j;
+    //int k = 1;
+
+    for(i=0; i<ROW; i++){      
+        printf("\n######## Entry for Row %d of selected Vector :#########\n",i+1); 
+        
+        for(j=0; j<COL; j++){    
+            printf("Please enter a number for row %d, col %d:",i+1, j+1);
+            scanf("%f",&hold[i][j]);  
+            
+        }
+        //k++;
+   
+    }
+
+    printf("\n");
+}
+

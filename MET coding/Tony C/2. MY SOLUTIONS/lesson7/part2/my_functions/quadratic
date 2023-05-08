@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+//A function that will return a 2d array of dependent variables given a set of independent variables
+
+void  Quadratic_fx(int first_term, int second_term, int third_term,int init_value, int final_value){
+    //int first_term,second_term, third_term;
+    int i;
+    int j=init_value;
+    int interval = final_value - init_value;
+    int output[interval];
+    for(i=0; i<interval; i++){
+        output[j] =  (first_term * (j*j) + second_term * (j) + third_term);
+        printf("%d\t%d\n", j,output[j]);
+        j ++;
+    }
+    
+    
+}
+

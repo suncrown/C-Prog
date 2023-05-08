@@ -1,0 +1,22 @@
+#include<stdio.h>
+// This function will sort from min to max any integer array passed into it as argument.
+// the value for size is in the main prog
+void sort(int hold[size]){ // It is void because it will not return anything when called. 
+    int i,j,temp;
+    for(i=0;i<size;i++){
+        for(j=i+1;j<size;j++){
+            if (hold[i] > hold[j]){
+                temp = hold[i];
+                hold[i]=hold[j];
+                hold[j]=temp;
+            }
+
+        }
+
+    }
+
+    for (i=0;i<size;i++){
+        printf("%d",hold[i]);
+    }
+    printf("\n");
+}

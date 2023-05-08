@@ -1,0 +1,21 @@
+#include<stdio.h>
+//Repeat exercise 5 for a range of values of -1 to 1 with a step size of 0.1.
+
+//A function that will return a 2d array of dependent variables given a set of independent variables
+
+void  Quadratic_fx(int first_term, int second_term, int third_term,float init_value, float final_value){
+    //int first_term,second_term, third_term;
+    int i,k, range;
+    float j=init_value;
+    range = (int)((final_value - init_value)/0.1);
+    float output[range];
+    for(i=0; i<range; i++){
+        //k = (int)init_value;
+        output[i] =  (first_term * (j*j) + second_term * (j) + third_term);
+        printf("%f\t%f\n", j,output[i]);
+        j +=  0.1;
+    }
+    
+    
+}
+
